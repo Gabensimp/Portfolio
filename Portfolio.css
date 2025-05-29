@@ -405,6 +405,7 @@ form .btn2{
 
   .logos {
     width: 180px;
+    z-index: -5;
   }
 
   nav ul {
