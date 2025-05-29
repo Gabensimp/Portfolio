@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="Portfolio.css?v=1.2">
+
+
+    <script src="https://kit.fontawesome.com/d3cfc195d9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header"> 
+        <div class="container"> 
+            <nav>
+                <img src="Images/Logos.png" class="logos">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a> </li>
+                    <li><a href="#about">About</a> </li>
+                    <li><a href="#services">Services</a> </li>
+                    <li><a href="#portfolio">Portfolio</a> </li>
+                    <li><a href="#contact">Contact</a> </li>
+                   <i class="fa-solid fa-xmark" onclick="closemenu()"></i> 
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+            <p>Software Engineer</p>
+            <h1>Hi, I'm <span>Rocsan</span> <br> B.S Information Technology</h1>
+            </div>
+        </div>
+    </div>
+    <!----------------------------About Me---------------->
+    <div id="about">
+        <div class="contain">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/About.jpg" alt="No Image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>My name is Rocsan Odi, and I hold a Bachelor of Science in Information Technology.
+                        I have a strong foundation in programming, systems analysis, and IT support, and I’m passionate about leveraging technology to solve real-world problems.
+                        I am a quick learner, a team player, and always eager to take on new challenges that contribute to my professional growth.
+                        I look forward to applying my skills to innovative projects and building a meaningful career in the tech industry.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+                            
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing Web/app Interfeces</li>
+                                 <li><span>Web development</span><br>Web app development</li>
+                                  <li><span>App Development</span><br>Building Android/IOS apps</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Experience">
+                            <ul>
+                                <li><span>May 23, 2022- January 7, 2023</span><br>It specialist at Unify</li>
+                                <li><span>July 15, 2019-October 21 2019 </span><br>IT HELP DESK L1 (OJT) at Sutherland BGC</li>
+                                 
+                                  
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Education">
+                            <ul>
+                                 <li><span>2016-2020</span><br>BS Information Technology ACLC Taguig</li>
+                                  <li><span>2014-2015</span><br>BS Information Technology AMA Makati</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ------------------------------------Services -->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+           
+            <div>
+                 <i class="fa-solid fa-w"></i>
+                <h2>Web Design</h2>
+                <p>A freelance web designer passionate about creating clean, 
+                    modern websites that not only look great but also work seamlessly across all devices. I help individuals, 
+                    startups, and small business es build an online presence that reflects their brand and engages their audience.
+                    With a focus on user experience and responsive design, I craft websites that are easy to navigate, fast to load, and optimized for 
+                    search engines. </p>
+                <a href="#">Learn more</a>
+            </div>
+                
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Software Dev</h2>
+                <p>I'm a software developer passionate about turning ideas into reliable, scalable, and efficient applications. 
+                    I collaborate with startups, small businesses, and individuals to create custom software solutions that solve real-world problems and drive meaningful results.</p>
+                <a href="#">Learn more</a>
+            </div>
+                
+            <div>
+                <i class="fa-brands fa-app-store-ios"></i>
+                <h2>App Dev</h2>
+                <p>I'm an app developer with a passion for building high-quality, user-friendly mobile applications. 
+                    I work with businesses, startups, and individuals to bring their ideas to life—whether it’s a simple utility app or a full-scale product.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ----------------------------------------------------portfolion---------------------------------- -->
+ <div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Images/Coming 1.jpg" alt="Error">
+                <div class="layer">
+                    <h3>Coming Soon</h3>
+                    <p>On work</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+             <div class="work">
+                <img src="Images/Coming 2.jpg" alt="Error">
+                <div class="layer">
+                    <h3>Coming Soon</h3>
+                    <p>On work</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+             <div class="work">
+                <img src="Images/Coming 3.jpg" alt="Error">
+                <div class="layer">
+                    <h3>Coming Soon</h3>
+                    <p>On work</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+                <a href="#" class="btn">See More</a>
+    </div>
+ </div>
+
+<!-- -----------------------------------------------------------Contacnt---------------- -->
+ <div id="contact">
+
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> Gabensimp@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 09364327005</p>
+                <div class="social-icon">
+                    <a href="https://www.facebook.com/Accelarator" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/Juuking" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/chiropterasoup" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="Images/Resume.pdf" download="" class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Messages" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2"> Submit </button>
+                </form>
+                <span id="ms"></span>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="copyright">© Rocsan. All rights reserved.</div> 
+    </footer>
+       
+    
+ </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+         for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+         }
+
+         for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+         }
+         event.currentTarget.classList.add("active-link");
+         document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+
+         function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+
+    </script>
+
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyHnCEil1EQStip1Kfek-DM0p4EbljTfZcJCgYZSYQnCfjcXExnsJ97W2t1gRmrm4wvCA/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const ms = document.getElementById("ms")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        ms.innerHTML = "Message has been sent!"
+        setTimeout(function(){
+            ms.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+
+<script>
+
+    
+</script>
+
+
+
+
+</body>
+</html>
