@@ -439,6 +439,7 @@ form .btn2{
 
   .header-text h1 {
     font-size: 36px;
+    z-index: 1;
   }
 
   .about-col-1,
