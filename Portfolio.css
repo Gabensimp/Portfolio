@@ -411,17 +411,18 @@ form .btn2{
 
   nav ul {
     position: fixed;
-    background: #e61ccb;
+    background: linear-gradient(180deg,rgba(121, 41, 193, 1) 0%, rgba(149, 57, 191, 1) 38%, rgba(5, 0, 0, 1) 100%);
     top: 0px;
     right: -200px;
-    width: 50px;
+    width: 1px;
     height: 100vh;
     padding-top: 10px;
     margin-top: 0px;
-    padding-right: 110px;
-    z-index: 2;
+    padding-right: 100px;
+    z-index: 999;
     transition: right 0.5s;
     font-size: 20px;
+    padding-left: 10px;
   }
 
   nav ul li {
