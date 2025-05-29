@@ -10,26 +10,33 @@
     <script src="https://kit.fontawesome.com/d3cfc195d9.js" crossorigin="anonymous"></script>
 </head>
 <body>
+        <img src="Images/Logos.png" class="logos">
     <div id="header"> 
         <div class="container"> 
             <nav>
-                <img src="Images/Logos.png" class="logos">
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a> </li>
                     <li><a href="#about">About</a> </li>
                     <li><a href="#services">Services</a> </li>
                     <li><a href="#portfolio">Portfolio</a> </li>
                     <li><a href="#contact">Contact</a> </li>
-                   <i class="fa-solid fa-xmark" onclick="closemenu()"></i> 
+                    <div id="close">
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i> 
+                    </div>
+                   
                 </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                <div id="menu">
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </div>         
             </nav>
+            
             <div class="header-text">
             <p>Software Engineer</p>
             <h1>Hi, I'm <span>Rocsan</span> <br> B.S Information Technology</h1>
             </div>
         </div>
     </div>
+
     <!----------------------------About Me---------------->
     <div id="about">
         <div class="contain">
