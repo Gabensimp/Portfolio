@@ -403,6 +403,11 @@ form .btn2 {
       transform: scale(1);
   }
 
+  .work:hover .layer {
+      height: auto !important;
+      bottom: 0 !important;
+  }
+
   /* Adjust the image to only round the top corners */
   .work img {
       border-radius: 10px 10px 0 0; 
