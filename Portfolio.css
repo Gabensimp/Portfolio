@@ -1,38 +1,35 @@
-*{
-    margin: 0.2%;
-    padding: 0.2%;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     background: black;
     color: white;
     margin: 0;
     padding: 0;
-
-  
 }
-#header{
+
+#header {
     width: 100%;
     height: 100vh;
     background-image: url("Images/Main.png");
     background-position: center;
     background-repeat: no-repeat;
-
 }
 
-nav{
+nav {
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
 }
 
-
-.logos{
+.logos {
    position: absolute;
    top: 0;
    left: 0;
@@ -40,89 +37,88 @@ nav{
    z-index: 0;
 }
 
-nav ul li{
+nav ul li {
     display: inline-block;
     list-style: none;
     margin: 10px 10px;
-
 }
 
-nav ul li a{
+nav ul li a {
     color: white;
     text-decoration: none;
-    font-size:  18px;
+    font-size: 18px;
     position: relative;
-
 }
-nav ul li a::after{
+
+nav ul li a::after {
     content: '';
     width: 0;
-    height:  3px;
+    height: 3px;
     background: #e61ccb;
     position: absolute;
     left: 0;
     bottom: -6px;
-    transition: 0.5s ;
+    transition: 0.5s;
 }
 
-nav ul li a:hover::after{
+nav ul li a:hover::after {
     width: 100%;
 }
 
-.header-text{
+.header-text {
     margin-top: 20%;
-    font-size:  30px;
+    font-size: 30px;
     z-index: 1;
 }
 
-.header-text h1{
+.header-text h1 {
     font-size: 60px;
     margin-top: 20px;
 }
 
-.header-text h1 span{
+.header-text h1 span {
     color: #e61ccb;
 }
 
 /* ----------------ABOUT ME------------ */
-#about{
+#about {
     padding: 80px 0px;
     color: #ffffff;
 }
-.row{
+
+.row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
 }
 
-.about-col-1{
+.about-col-1 {
     flex-basis: 30%;
 }
 
-.about-col-1 img{
+.about-col-1 img {
     width: 100%;
     border-radius: 60px;
     padding: 30px;
     margin: 50px;
 }
 
-.about-col-2{
+.about-col-2 {
     flex-basis: 55%;
 }
 
-.sub-title{
+.sub-title {
     font-size: 60px;
     font-weight: 600;
     color: white;
 }
 
-.tab-titles{
+.tab-titles {
     display: flex;
     margin: 20px 0 40px;
 }
 
-.tab-links{
+.tab-links {
     margin-right: 50px;
     font-size: 18px;
     font-weight: 500;
@@ -130,7 +126,7 @@ nav ul li a:hover::after{
     position: relative;
 }
 
-.tab-links::after{
+.tab-links::after {
     content: '';
     width: 0;
     height: 3px;
@@ -141,105 +137,99 @@ nav ul li a:hover::after{
     transition: 0.5s;
 }
 
-.tab-links.active-link::after{
+.tab-links.active-link::after {
     width: 50%;
 }
 
-.tab-contents ul li{
+.tab-contents ul li {
     list-style: none;
     margin: 10px 0;
-
 }
-.tab-contents ul li span{
-    color:#a788a8;
+
+.tab-contents ul li span {
+    color: #a788a8;
     font-size: 14px;
 }
 
-.tab-contents{
+.tab-contents {
     display: none;
 }
 
-.tab-contents.active-tab{
+.tab-contents.active-tab {
     display: block;
 }
 
 /* ----------------------------------------Services----------------------------------------- */
-#services{
+#services {
     padding: 30px 0;
 }
 
-.services-list{
+.services-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 40px;
 }
 
-.services-list div{
+.services-list div {
     background: #262626;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
     border-radius: 10px;
-   transition: background-color 0.5s, transform 0.5s;
+    transition: background-color 0.5s, transform 0.5s;
 }
 
-.services-list div i{
+.services-list div i {
     font-size: 50px;
     margin-bottom: 30px;
-
 }
 
-.services-list div h2{
+.services-list div h2 {
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
 }
 
-.services-list div a{
+.services-list div a {
     text-decoration: none;
     color: white;
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
-
-
 }
 
-.services-list div:hover{
+.services-list div:hover {
     background: #e61ccb;
     transform: translate(-10px);
-
 }
 
 /* -----------------------------------------------portfolio------------------ */
-
-#portfolio{
+#portfolio {
     padding: 50px 0;
 }
 
-.work-list{
-      display: grid;
+.work-list {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 40px;
 }
 
-.work{
+.work {
     border-radius: 10px;
     position: relative;
     overflow: hidden;
 }
 
-.work img{
+.work img {
     width: 100%;
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;
-    
 }
 
-.layer{
+.layer {
     width: 100%;
     height: 0%;
     background: linear-gradient(rgba(0,0,0,0.6), #e61ccb);
@@ -249,7 +239,7 @@ nav ul li a:hover::after{
     bottom: 0px;
     overflow: hidden;
     display: flex;
-    align-items: center ;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 0 40px;
@@ -258,12 +248,12 @@ nav ul li a:hover::after{
     transition: height 0.5s;
 }
 
-.layer h3{
+.layer h3 {
     font-weight: 300;
     margin-bottom: 20px;
 }
 
-.layer a{
+.layer a {
     margin-top: 20px;
     color: #e61ccb;
     text-decoration: none;
@@ -273,18 +263,17 @@ nav ul li a:hover::after{
     width: 60px;
     height: 60px;
     border-radius: 50%;
-
 }
 
-.work:hover img{
+.work:hover img {
     transform: scale(1.1);
 }
 
-.work:hover .layer{
+.work:hover .layer {
     height: 100%;
 }
 
-.btn{
+.btn {
     display: block;
     margin: 50px auto;
     width: fit-content;
@@ -294,40 +283,36 @@ nav ul li a:hover::after{
     text-decoration: none;
     color: white;
     transition: background 0.5s;
-
 }
 
-.btn:hover{
+.btn:hover {
     background: #e61ccb;
-
 }
 
 /* -----------------------------------------Contact-------------- */
-
-.contact-left{
+.contact-left {
     flex-basis: 35%;
 }
 
-.contact-right{
-
-    flex: 60%
+.contact-right {
+    flex: 60%;
 }
-.contact-left p{
+
+.contact-left p {
     margin-top: 30px;
-
 }
 
-.contact-left p i{
+.contact-left p i {
     color: #e61ccb;
     margin-right: 15px;
     font-size: 25px;
 }
 
-.social-icon{
+.social-icon {
     margin-top: 30px;
 }
 
-.social-icon a{
+.social-icon a {
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
@@ -336,22 +321,21 @@ nav ul li a:hover::after{
     transition: transform 0.5s;
 }
 
-.contact-left a:hover{
+.contact-left a:hover {
     color: #ffffff;
     transform: translateY(-5px);
 }
 
-.btn.btn2{
+.btn.btn2 {
     display: inline-block;
     background: #e61ccb;
 }
 
-.contact-right form{
+.contact-right form {
     width: 100%;
-
 }
 
-form input, form textarea{
+form input, form textarea {
     width: 100%;
     border: 0;
     outline: none;
@@ -360,34 +344,30 @@ form input, form textarea{
     margin: 15px 0;
     color: white;
     border-radius: 6px;
-
 }
 
-form .btn2{
+form .btn2 {
     padding: 14px 60px;
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
 }
 
-.copyright{
+.copyright {
     width: 100%;
     text-align: center;
     padding: 10px 0;
     background: #262626;
     font-weight: 300;
     margin-top: 20px;
-    
 }
 
-#close, #menu{
+#close, #menu {
     display: none;
 }
 
-
 /* -------------------------------MObile--------------------------- */
 @media only screen and (max-width: 768px) {
-
 
   body {
     margin-left: 5%;
@@ -395,14 +375,14 @@ form .btn2{
   }
   
   #close, #menu {
-  position: absolute;
-  top: 10px;
-  right: 50px;
-  cursor: pointer;
-  z-index: 1;
-  display: block;
-  font-size: 25px;
-}
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    cursor: pointer;
+    z-index: 1;
+    display: block;
+    font-size: 25px;
+  }
 
   nav {
     flex-direction: column;
@@ -417,7 +397,7 @@ form .btn2{
 
   nav ul {
     position: fixed;
-    background: linear-gradient(180deg,rgba(121, 41, 193, 1) 0%, rgba(149, 57, 191, 1) 38%, rgba(5, 0, 0, 1) 100%);
+    background: linear-gradient(180deg, rgba(121, 41, 193, 1) 0%, rgba(149, 57, 191, 1) 38%, rgba(5, 0, 0, 1) 100%);
     top: 0px;
     right: -200px;
     width: 1px;
@@ -434,9 +414,7 @@ form .btn2{
   nav ul li {
     display: block;
     margin-top: 50px;
-   
   }
-
 
   .header-text {
     position: absolute;
@@ -445,7 +423,7 @@ form .btn2{
     transform: translateX(-50%);
     text-align: center;
     z-index: 2;
-}
+  }
 
   .header-text h1 {
     font-size: 36px;
@@ -510,13 +488,10 @@ form .btn2{
     font-size: 14px;
     padding: 15px 0;
   }
-
 }
 
-#ms{
+#ms {
     color: #e61ccb;
     margin-top: -40px;
     display: block;
-  }
-
-
+}

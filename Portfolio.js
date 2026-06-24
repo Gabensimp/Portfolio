@@ -2,7 +2,7 @@
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
-function opentab(tabname) {
+function opentab(tabname, event) {
     for (let tablink of tablinks) {
         tablink.classList.remove("active-link");
     }
@@ -15,6 +15,7 @@ function opentab(tabname) {
     document.getElementById(tabname).classList.add("active-tab");
 }
 
+
 // ------------------ Mobile Menu ------------------
 var sidemenu = document.getElementById("sidemenu");
 
@@ -26,9 +27,10 @@ function closemenu() {
     sidemenu.style.right = "-200px";
 }
 
+
 // ------------------ Contact Form ------------------
 const scriptURL =
-    "https://script.google.com/macros/s/AKfycbyHnCEil1EQStip1Kfek-DM0p4EbljTfZcJCgYZSYQnCfjcXExnsJ97W2t1gRmrm4wvCA/exec";
+    "https://script.google.com/macros/s/AKfycbwlmCQCTzTuWWtEXTBcACJILzv9ro8MXNwtG1xNWyEQk4u0IH8FxGFrFbo2JVOo3rrfiw/exec";
 
 const form = document.forms["submit-to-google-sheet"];
 const ms = document.getElementById("ms");
@@ -40,38 +42,34 @@ if (form) {
         e.preventDefault();
 
         if (!canSubmit) {
-            ms.innerHTML =
-                "Please wait 10 seconds before sending another message.";
-
-            setTimeout(() => {
-                ms.innerHTML = "";
-            }, 3000);
-
+            ms.innerHTML = "Please wait 10 seconds before sending another message.";
+            setTimeout(() => (ms.innerHTML = ""), 3000);
             return;
         }
 
         canSubmit = false;
 
+        ms.innerHTML = "Sending...";
+
         fetch(scriptURL, {
             method: "POST",
             body: new FormData(form),
         })
-            .then((response) => {
+            .then((response) => response.text())
+            .then(() => {
                 ms.innerHTML = "Message has been sent!";
+                form.reset();
 
                 setTimeout(() => {
                     ms.innerHTML = "";
                 }, 5000);
-
-                form.reset();
 
                 setTimeout(() => {
                     canSubmit = true;
                 }, 10000);
             })
             .catch((error) => {
-                console.error("Error!", error.message);
-
+                console.error("Error!", error);
                 ms.innerHTML = "There was an error sending your message.";
 
                 setTimeout(() => {
