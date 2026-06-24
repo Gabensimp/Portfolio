@@ -2,16 +2,21 @@
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
-function opentab(tabname, event) {
+function opentab(event, tabname) {
+    // 1. Remove the active line from all tabs
     for (let tablink of tablinks) {
         tablink.classList.remove("active-link");
     }
 
+    // 2. Hide all tab contents
     for (let tabcontent of tabcontents) {
         tabcontent.classList.remove("active-tab");
     }
 
+    // 3. Add the active line to the tab you just clicked
     event.currentTarget.classList.add("active-link");
+
+    // 4. Show the contents of the tab you just clicked
     document.getElementById(tabname).classList.add("active-tab");
 }
 
