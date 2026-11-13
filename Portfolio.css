@@ -18,7 +18,7 @@ body {
 #header {
     width: 100%;
     height: 100vh;
-    background-image: url("Images/MainB.png");
+    background-image: url("Images/Main.png");
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -764,8 +764,10 @@ nav ul li a {
     }
 
     nav ul {
-        width: 250px;
-        right: -260px;
+        /* Keep these values in sync with the JavaScript menu toggle:
+           open = right: "0px"; close = right: "-200px" */
+        width: 200px;
+        right: -200px;
         padding: 16px 20px;
         box-sizing: border-box;
     }
@@ -937,5 +939,41 @@ nav ul li a {
         transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE MENU FIX
+   Uses transform instead of fixed negative right offsets.
+   This prevents part of the menu remaining visible on Android.
+   ========================================================= */
+@media only screen and (max-width: 768px) {
+    nav ul#sidemenu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: min(80vw, 280px);
+        height: 100vh;
+        height: 100dvh;
+        box-sizing: border-box;
+        padding: 16px 20px;
+        margin: 0;
+        transform: translateX(100%);
+        transition: transform 0.35s ease;
+        z-index: 999;
+        overflow-y: auto;
+    }
+
+    nav ul#sidemenu.menu-open {
+        transform: translateX(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    @media only screen and (max-width: 768px) {
+        nav ul#sidemenu {
+            transition: none;
+        }
     }
 }

@@ -25,13 +25,12 @@ function opentab(event, tabname) {
 var sidemenu = document.getElementById("sidemenu");
 
 function openmenu() {
-    sidemenu.style.right = "0";
+    sidemenu.classList.add("menu-open");
 }
 
 function closemenu() {
-    sidemenu.style.right = "-200px";
+    sidemenu.classList.remove("menu-open");
 }
-
 
 // ------------------ Contact Form ------------------
 const scriptURL =
