@@ -552,3 +552,390 @@ form .btn2 {
     padding: 15px 0;
   }
 }
+
+/* =========================================================
+   RESPONSIVE LAYOUT IMPROVEMENTS
+   Added: 2026-11-13
+   These overrides keep the original design while making it
+   adapt better to desktop, laptop, tablet, and mobile screens.
+   ========================================================= */
+
+/* Prevent page-level horizontal overflow */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+}
+
+/* Consistent, flexible content width */
+.container {
+    width: min(100% - 48px, 1200px);
+    margin-inline: auto;
+    padding-inline: 0;
+}
+
+/* Header */
+#header {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+}
+
+.header-text {
+    position: relative;
+    z-index: 2;
+    margin-top: clamp(90px, 16vh, 180px);
+    font-size: clamp(18px, 2.2vw, 30px);
+    max-width: 100%;
+}
+
+.header-text h1 {
+    font-size: clamp(36px, 5vw, 60px);
+    line-height: 1.12;
+    overflow-wrap: break-word;
+}
+
+/* Navigation */
+nav {
+    align-items: center;
+    gap: 12px;
+}
+
+nav ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+nav ul li {
+    margin: 10px clamp(6px, 0.8vw, 10px);
+}
+
+nav ul li a {
+    font-size: clamp(15px, 1.35vw, 18px);
+}
+
+/* About section */
+#about {
+    padding-block: clamp(48px, 7vw, 80px);
+}
+
+.row {
+    align-items: center;
+    gap: clamp(24px, 4vw, 48px);
+}
+
+.about-col-1 {
+    flex: 1 1 280px;
+    min-width: 0;
+}
+
+.about-col-1 img {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 30px;
+}
+
+.about-col-2 {
+    flex: 1.5 1 420px;
+    min-width: 0;
+}
+
+.sub-title {
+    font-size: clamp(34px, 4.5vw, 60px);
+    line-height: 1.15;
+}
+
+.tab-titles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+}
+
+.tab-links {
+    margin-right: 0;
+    font-size: clamp(16px, 1.5vw, 18px);
+}
+
+/* Services and portfolio grids */
+.services-list,
+.work-list {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: clamp(18px, 3vw, 40px);
+}
+
+.services-list div {
+    min-width: 0;
+    padding: clamp(22px, 3vw, 40px);
+}
+
+.services-list div h2 {
+    font-size: clamp(22px, 2.4vw, 30px);
+}
+
+.work {
+    min-width: 0;
+}
+
+.work img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.layer {
+    padding-inline: clamp(16px, 3vw, 40px);
+}
+
+/* Contact section */
+.contact-left {
+    flex: 1 1 280px;
+    min-width: 0;
+}
+
+.contact-right {
+    flex: 1.5 1 400px;
+    min-width: 0;
+}
+
+/* Tablet and smaller laptop screens */
+@media only screen and (max-width: 1024px) {
+    .container {
+        width: min(100% - 40px, 900px);
+    }
+
+    .header-text {
+        margin-top: clamp(80px, 13vh, 140px);
+    }
+
+    .about-col-1 {
+        flex-basis: 260px;
+    }
+
+    .about-col-2 {
+        flex-basis: 380px;
+    }
+
+    .services-list,
+    .work-list {
+        gap: 24px;
+    }
+}
+
+/* Mobile and small tablets */
+@media only screen and (max-width: 768px) {
+    body {
+        margin: 0;
+    }
+
+    .container {
+        width: calc(100% - 36px);
+        padding: 0;
+    }
+
+    #header {
+        min-height: 100svh;
+        background-position: center;
+    }
+
+    #close,
+    #menu {
+        top: 16px;
+        right: 18px;
+    }
+
+    .logos {
+        width: clamp(130px, 28vw, 180px);
+    }
+
+    nav {
+        align-items: flex-start;
+    }
+
+    nav ul {
+        width: 250px;
+        right: -260px;
+        padding: 16px 20px;
+        box-sizing: border-box;
+    }
+
+    nav ul li {
+        margin: 28px 0;
+    }
+
+    .header-text {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: calc(100% - 36px);
+        margin: clamp(70px, 12vh, 110px) auto 0;
+        text-align: center;
+    }
+
+    .header-text h1 {
+        font-size: clamp(32px, 8vw, 42px);
+    }
+
+    #about {
+        padding-block: 48px;
+    }
+
+    .row {
+        gap: 28px;
+    }
+
+    .about-col-1,
+    .about-col-2,
+    .contact-left,
+    .contact-right {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .about-col-1 img {
+        width: min(100%, 360px);
+        margin: 0 auto;
+    }
+
+    .sub-title {
+        font-size: clamp(32px, 8vw, 40px);
+        text-align: center;
+    }
+
+    .tab-titles {
+        justify-content: center;
+        gap: 10px 22px;
+        margin-bottom: 28px;
+    }
+
+    .tab-links {
+        margin: 8px 0;
+    }
+
+    .services-list,
+    .work-list {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        margin-top: 24px;
+    }
+
+    .services-list div {
+        padding: 26px;
+    }
+
+    .layer {
+        position: relative;
+        bottom: auto;
+        height: auto;
+        min-height: 0;
+        padding: 20px;
+        background: #262626;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .work img {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .work:hover img {
+        transform: none;
+    }
+
+    .work:hover .layer {
+        height: auto;
+    }
+
+    .layer h3 {
+        font-size: 20px;
+        margin: 0 0 10px;
+    }
+
+    .layer p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .layer a {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0 0 10px;
+    }
+
+    .contact-left p {
+        overflow-wrap: anywhere;
+    }
+
+    .social-icon {
+        text-align: center;
+    }
+
+    .btn {
+        padding: 12px 28px;
+        font-size: 14px;
+    }
+
+    .copyright {
+        font-size: 13px;
+        padding: 15px 12px;
+    }
+}
+
+/* Very small phones */
+@media only screen and (max-width: 480px) {
+    .container {
+        width: calc(100% - 28px);
+    }
+
+    .header-text {
+        width: calc(100% - 28px);
+    }
+
+    .header-text h1 {
+        font-size: clamp(28px, 8vw, 36px);
+    }
+
+    .services-list div {
+        padding: 22px;
+    }
+
+    .tab-titles {
+        gap: 8px 16px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 16px;
+    }
+
+    form .btn2 {
+        padding: 12px 28px;
+    }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
