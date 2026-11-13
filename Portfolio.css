@@ -949,23 +949,16 @@ nav ul li a {
    This prevents part of the menu remaining visible on Android.
    ========================================================= */
 @media only screen and (max-width: 768px) {
-    nav ul#sidemenu {
+    nav ul {
         position: fixed;
-        top: 0;
         right: 0;
-        width: min(80vw, 280px);
-        height: 100vh;
-        height: 100dvh;
-        box-sizing: border-box;
-        padding: 16px 20px;
-        margin: 0;
         transform: translateX(100%);
-        transition: transform 0.35s ease;
-        z-index: 999;
-        overflow-y: auto;
+        width: min(250px, 80vw);
+        height: 100vh;
+        transition: transform 0.5s ease;
     }
 
-    nav ul#sidemenu.menu-open {
+    nav ul.menu-open {
         transform: translateX(0);
     }
 }
